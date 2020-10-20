@@ -113,40 +113,40 @@
 
       //****Make two walls for the gallery paintings and photographs
       //****Alkek_makeBox(myWidth,myHeight,myDepth,x,y,z,rotx,roty,rotz,picFile,giveUniqueName);
-      //--->Alkek_makeBox(30,80,2,-20,40,-10,0,0,0,"textures/images/materials/stone8.jpg","void_LeftWall");
-      //--->Alkek_makeBox(30,80,2,20,40,-10,0,0,0,"textures/images/materials/stone8.jpg","void_RightWall");
+      Alkek_makeBox(30,80,2,-20,40,-10,0,0,0,"textures/images/materials/stone8.jpg","void_LeftWall");
+      Alkek_makeBox(30,80,2,20,40,-10,0,0,0,"textures/images/materials/stone8.jpg","void_RightWall");
 
       //****How to make a picture frame
       //****Alkek_framePicture(picFile,frameHeight,frameThickness,picFrame,x,y,z,rotx,roty,rotz,giveUniqueName);
-      //--->Alkek_framePicture("textures/images/myPhotos/samplepic.jpg",25,0.5,"textures/images/materials/stone2.jpg",
-      //--->  0,25,skyBoxSize / 2.0,0,0,0,"waterfall");
+      Alkek_framePicture("textures/images/myPhotos/samplepic.jpg",25,0.5,"textures/images/materials/stone2.jpg", 
+      0,25,skyBoxSize / 2.0,0,0,0,"waterfall");
 
       //****Shine a spot light on the picture
       //****Alkek_makeSpotLight(x,y,z,dirX,dirY,dirZ,fillAngle,giveUniqueName);
-      //--->Alkek_makeSpotLight(0,40,skyBoxSize/2.0-20, 0, -3,13,1.57,"pictureSpotLight");
-
+      Alkek_makeSpotLight(0,40,skyBoxSize/2.0-20, 0, -3,13,1.57,"pictureSpotLight");
+      // Alkek_makeSpotLight(0,40,skyBoxSize/2.0-20, 0, -3,13,3.14,"pictureSpotLight");
 
 
    //****Handle Click Events, types of clicks
       //****Alkek_handleClick(timeToMoveTo, howCloseToObject);
-      //--->Alkek_handleClick(4, 5);
+      Alkek_handleClick(4, 5);
 
 
       //****How to make a picture frame
       //****Alkek_framePicture(picFile,frameHeight,frameThickness,picFrame,x,y,z,rotx,roty,rotz,giveUniqueName);
-     //--->Alkek_framePicture(
-      //---> "textures/images/myPhotos/square5.jpg",12,0.5,"textures/images/materials/stone2.jpg",
-      //--->  -15,10,-12,0,0,0,"abstract");
+     Alkek_framePicture(
+       "textures/images/myPhotos/square5.jpg",12,0.5,"textures/images/materials/stone2.jpg",
+        -15,10,-12,0,0,0,"abstract");
 
        //****Shine a spot light on the picture
       //****Alkek_makeSpotLight(x,y,z,dirX,dirY,dirZ,fillAngle,giveUniqueName);
-      //--->Alkek_makeSpotLight(0,30,-25,0,-1,2,3.14/1.2,"paintingLight");
-
+      Alkek_makeSpotLight(0,30,-25,0,-1,2,3.14/1.2,"paintingLight");
+      Alkek_makeSpotLight(0,10,0,0,-1,0,3.13,"center spotlight");
      
       //****How to make a TV to show videos
       //****Alkek_makeTV(videoFile,picFrame,tvHeight,x,y,z,rotx,roty,rotz,giveUniqueName);
-    //---> Alkek_makeTV("textures/videos/babydemo.mp4","textures/images/materials/stone2.jpg",
-     //--->15,30,15,skyBoxSize / 2.0,0,0,0,"myTv");
+     Alkek_makeTV("textures/videos/babydemo.mp4","textures/images/materials/stone2.jpg",
+     15,30,15,skyBoxSize / 2.0,0,0,0,"myTv");
 
 
       
@@ -155,26 +155,26 @@
 
     
       //****This is for specialized Spatial AR Projection
-      //--->Alkek_makeFunkyShaders("textures/images/shaders/amiga.jpg",
-      //--->  "textures/images/shaders/rodgera.jpg");
+      Alkek_makeFunkyShaders("textures/images/shaders/amiga.jpg",
+        "textures/images/shaders/rodgera.jpg");
 
       //****Alkek_loadARSculpture(sculptureDirectory,sculptureFile,scale,x,y,z,rotx,roty,rotz)
-      //--->Alkek_loadARSculpture("textures/models/","aball.glb",3.25,0,8,7,0,0,0,"projectedSculpture");
+      Alkek_loadARSculpture("textures/models/","aball.glb",3.25,0,8,7,0,0,0,"projectedSculpture");
      
       //****Alkek_loadARSculpture(sculptureDirectory,sculptureFile,scale,x,y,z,rotx,roty,rotz)
-      //--->Alkek_loadARSculpture("textures/models/","galleryText.glb",2,-20,18,-12,1.57,0,0,"wordGallery");
+      Alkek_loadARSculpture("textures/models/","galleryText.glb",2,-20,18,-12,1.57,0,0,"wordGallery");
       
       //****Alkek_loadARSculpture(sculptureDirectory,sculptureFile,scale,x,y,z,rotx,roty,rotz)
-      //--->Alkek_loadARSculpture("textures/models/","nameText.glb",3.75,8,18,-12,1.57,0,0,"wordName");
+      Alkek_loadARSculpture("textures/models/","nameText.glb",3.75,8,18,-12,1.57,0,0,"wordName");
  
       //****Makes a spherical video or image display
       //****Alkek_makePuffer(myDiameter,x,y,z,rotx,roty,rotz,picFile,giveUniqueName);
-      //--->Alkek_makePuffer(6,12,8,-16,3.14,0,0,"textures/images/myPhotos/photo360.jpg","puffer1");
+      Alkek_makePuffer(6,12,8,-16,3.14,0,0,"textures/images/myPhotos/photo360.jpg","puffer1");
 
 
     
     //****How to videoCast onto another object
-      //****Alkek_showVideoOn(meshName);
+      Alkek_showVideoOn("puffer1");
 
       //**************************end Workshop*******************************************
       //**************************end Workshop*******************************************
